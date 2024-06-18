@@ -104,7 +104,7 @@ export const AuthContextProvider = ({ children }) => {
                 isLoginLoading,
             }}
         >
-            {children}
+            { children }
         </AuthContext.Provider>
     );
 // ---------------------------------------------------------------------------
