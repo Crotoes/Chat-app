@@ -16,7 +16,6 @@ export const useFetchRecipientUser = (chat, user) => {
             if(response.error) {
                 return setError(error);
             }
-
             setRecipientUser(response);
         };
 
