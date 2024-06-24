@@ -17,8 +17,6 @@ const ChatBox = () => {
         scroll.current?.scrollIntoView({behavior : "smooth"});
     },[messages]);
 
-    console.log("text", textMessage);
-
     if(!recipientUser) return (
         <p style = {{ textAlign:"center", width : "100%" }}>
             No conversation selected yet...
