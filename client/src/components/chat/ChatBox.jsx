@@ -44,7 +44,7 @@ const ChatBox = () => {
                         ref = {scroll}
                     >
                         <span>{message.text}</span>
-                        <span className="message-footer">{moment(message.createAt).calendar()}</span>
+                        <span className="message-footer">{moment(message.createdAt).calendar()}</span>
                     </Stack>)}
             </Stack>
             <Stack direction="horizontal" gap = {3} className = "chat-input flex-grow-0">

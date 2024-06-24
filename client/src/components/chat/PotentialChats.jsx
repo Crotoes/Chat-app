@@ -19,7 +19,7 @@ const PotentialChats = () => {
                         >
                             {u.name}
                         <span className={
-                            onlineUsers?.some((user) => user?.userId == u?._id) ? "user-online" : ""}></span>
+                            onlineUsers?.some((user) => user?.userId === u?._id) ? "user-online" : ""}></span>
                     </div>
                     );
                 })}
