@@ -9,7 +9,7 @@ import moment from "moment";
 
 export const UserChat = ({ chat, user }) => {
     const { recipientUser } = useFetchRecipientUser(chat, user);
-    const { onlineUsers, notifications, markThisUserNotificationsAsRead } = useContext(ChatContext);
+    const { OnlineUsers, notifications, markThisUserNotificationsAsRead } = useContext(ChatContext);
     const { latestMessage } = useFetchLatestMessage(chat);
 
     const unreadNotifications = unreadNotificationsFunc(notifications);
@@ -17,7 +17,7 @@ export const UserChat = ({ chat, user }) => {
         n => n.senderId == recipientUser?._id
     );
     
-    const isOnline = onlineUsers?.some((user) => user?.userId === recipientUser?._id);
+    const isOnline = OnlineUsers?.some((user) => user?.userId === recipientUser?._id);
 
     const truncateText = (text) => {
         text = ''+text;

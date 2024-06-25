@@ -20,6 +20,8 @@ export const ChatContextProvider = ({children, user}) => {
     const [notifications, setNotifications] = useState([]);
     const [allUsers, setAllUsers] = useState([]);
 
+    console.log("OnlineUsers", OnlineUsers);
+
     //initial socket
     useEffect(() => {
         const newSocket = io("http://localhost:3000");
@@ -159,7 +161,7 @@ export const ChatContextProvider = ({children, user}) => {
             );
             
             if(response.error){
-                return setSendTextMessagesError(response);
+                return setSendTextMessageError(response);
             }
 
             setNewMessage(response);
@@ -252,6 +254,7 @@ export const ChatContextProvider = ({children, user}) => {
             currentChat,
             updateCurrentChat,
             messages,
+            sendTextMessageError,
             isMessagesLoading,
             messagesError,
             sendTextMessage,
